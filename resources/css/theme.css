@@ -20,17 +20,16 @@
   --color-secondary-900: rgba(var(--secondary-900), <alpha-value>);
   --color-secondary-950: rgba(var(--secondary-950), <alpha-value>);
 
-  --color-polarnight-50: #e5e9f0;  /* Lightest (pale version of #2E3440) */
-  --color-polarnight-100: #d1d7e0; /* Light shade of #2E3440 */
-  --color-polarnight-200: #a7b1c5; /* Lighter shade of #3B4252 */
-  --color-polarnight-300: #8c9ab3; /* Lighter shade of #3B4252 */
-  --color-polarnight-400: #71829b; /* Lighter shade of #434C5E */
-  --color-polarnight-500: #4c566a; /* Base color (#4C566A) */
-  --color-polarnight-600: #434c5e; /* Darker shade of #434C5E */
-  --color-polarnight-700: #3b4252; /* Darker shade of #3B4252 */
-  --color-polarnight-800: #2e3440; /* Base color (#2E3440) */
-  --color-polarnight-900: #232831; /* Darker shade of #2E3440 */
-  --color-polarnight-950: #1b2027; /* Darkest shade, almost black */
+  --color-ruxora-bg-light: #ffffff;
+  --color-ruxora-bg-light-secondary: #fdf7fa;
+  --color-ruxora-border-light: #ecdfe6;
+  --color-ruxora-text-light: #14171f;
+  --color-ruxora-muted-light: #4f5564;
+  --color-ruxora-bg-dark: #181115;
+  --color-ruxora-bg-dark-secondary: #231a20;
+  --color-ruxora-border-dark: #33282e;
+  --color-ruxora-text-dark: #ffffff;
+  --color-ruxora-muted-dark: #c8bcc2;
 }
 
 /* ===========================
@@ -38,11 +37,11 @@
    =========================== */
 
 .fi-layout {
-    @apply bg-[#f5f8fa] dark:bg-[#252a35]; /*#2e3440*/
+    @apply bg-white dark:bg-[#181115];
 }
 
 .fi-body {
-    @apply bg-[#f5f8fa] dark:bg-polarnight-900;
+    @apply bg-white dark:bg-[#181115];
 }
 
 /* ===========================
@@ -51,7 +50,7 @@
 
 .fi-topbar {
     & nav {
-        @apply bg-[#f5f8fa] dark:bg-[#252a35];
+        @apply bg-white dark:bg-[#231a20];
     }
 
     & .fi-tenant-menu {
@@ -60,18 +59,18 @@
 }
 
 .fi-sidebar-header {
-    @apply bg-[#f5f8fa] dark:bg-[#252a35];
+    @apply bg-white dark:bg-[#231a20];
 }
 
 .fi-sidebar-item-label,
 .fi-topbar-item-label {
-    @apply dark:text-gray-400;
+    @apply text-[#4f5564] dark:text-[#c8bcc2];
 }
 
 /* Sidebar Items */
 .fi-sidebar-item {
     & .fi-sidebar-item-button {
-        @apply rounded-lg hover:bg-[#d8dee9] dark:hover:bg-white/5;
+        @apply rounded-lg hover:bg-[#fdf7fa] dark:hover:bg-[#33282e];
     }
 
     &-active {
@@ -86,7 +85,7 @@
         }
 
         & .fi-sidebar-item-button {
-            @apply rounded-lg bg-[#eceff4] dark:focus-visible:bg-white/5 dark:bg-white/5;
+            @apply rounded-lg bg-[#fdf7fa] dark:focus-visible:bg-[#33282e] dark:bg-[#33282e];
         }
     }
 }
@@ -94,7 +93,7 @@
 /* Topbar Items */
 .fi-topbar-item {
     & .fi-topbar-item-button {
-        @apply rounded-lg hover:bg-[#d8dee9] dark:hover:bg-white/5;
+        @apply rounded-lg hover:bg-[#fdf7fa] dark:hover:bg-[#33282e];
     }
 
     &-active {
@@ -107,7 +106,7 @@
         }
 
         & .fi-topbar-item-button {
-            @apply rounded-lg bg-[#eceff4] dark:focus-visible:bg-white/5 dark:bg-white/5;
+            @apply rounded-lg bg-[#fdf7fa] dark:focus-visible:bg-[#33282e] dark:bg-[#33282e];
         }
 
         & a,
@@ -153,15 +152,15 @@
     }
 
     &-color-primary {
-        @apply bg-[#88c0d0];
+        @apply bg-primary-500;
 
         & .fi-btn-label {
-            @apply text-primary-950;
+            @apply text-white;
         }
     }
 
     &-color-gray span {
-        @apply text-[#434c5e] dark:text-[#e5e9f0];
+        @apply text-[#14171f] dark:text-white;
     }
 }
 
@@ -188,18 +187,18 @@
 
     &,
     & .fi-ta-ctn-with-header {
-        @apply dark:bg-[var(--color-polarnight-800)];
+        @apply dark:bg-[var(--color-ruxora-bg-dark-secondary)];
     }
 }
 
 .fi-ta-table {
     & thead tr {
-        @apply bg-[#fbfcfd] dark:bg-[#3b414e];
+        @apply bg-[#fdf7fa] dark:bg-[#33282e];
     }
 }
 
 .fi-ta-header-cell-label {
-    @apply text-[#434c5e] dark:text-[#e5e9f0];
+    @apply text-[#14171f] dark:text-white;
 }
 
 .fi-ta-toggle {
@@ -215,7 +214,7 @@
 /* Table Search Field */
 .fi-ta-search-field {
     & .fi-input-wrp {
-        @apply rounded-full bg-[#f5f8fa] dark:bg-gray-900;
+        @apply rounded-full bg-[#fdf7fa] dark:bg-[#181115];
     }
 }
 
@@ -226,26 +225,26 @@
 /* Generic section-based widgets (Account, Info, and custom widgets) */
 .fi-wi-widget:not(.fi-wi-stats-overview):not(.fi-wi-chart):not(.fi-wi-table) {
     & .fi-section {
-        @apply border border-transparent dark:bg-secondary-900 shadow-md rounded-2xl border-none ring-0 dark:ring-1 dark:ring-gray-700 dark:hover:text-white/70 dark:hover:ring-gray-500;
+        @apply border border-transparent bg-white dark:bg-[#231a20] shadow-md rounded-2xl border-none ring-0 dark:ring-1 dark:ring-[#33282e] dark:hover:text-white/70 dark:hover:ring-[#c8bcc2];
     }
 }
 
 /* Stats overview - individual stat cards */
 .fi-wi-stats-overview-stat {
-    @apply border border-transparent dark:bg-secondary-900 shadow-md rounded-2xl border-none ring-0 dark:ring-1 dark:ring-gray-700 dark:hover:text-white/70 dark:hover:ring-gray-500;
+    @apply border border-transparent bg-white dark:bg-[#231a20] shadow-md rounded-2xl border-none ring-0 dark:ring-1 dark:ring-[#33282e] dark:hover:text-white/70 dark:hover:ring-[#c8bcc2];
 }
 
 /* Chart widgets */
 .fi-wi-widget.fi-wi-chart {
     & .fi-section {
-        @apply border border-transparent dark:bg-secondary-900 shadow-md rounded-2xl border-none ring-0 dark:ring-1 dark:ring-gray-700 dark:hover:text-white/70 dark:hover:ring-gray-500;
+        @apply border border-transparent bg-white dark:bg-[#231a20] shadow-md rounded-2xl border-none ring-0 dark:ring-1 dark:ring-[#33282e] dark:hover:text-white/70 dark:hover:ring-[#c8bcc2];
     }
 }
 
 /* Table widget */
 .fi-wi-widget.fi-wi-table {
     & .fi-ta-ctn {
-        @apply border border-transparent dark:bg-secondary-900 shadow-md rounded-2xl border-none ring-0 dark:ring-1 dark:ring-gray-700 dark:hover:text-white/70 dark:hover:ring-gray-500;
+        @apply border border-transparent bg-white dark:bg-[#231a20] shadow-md rounded-2xl border-none ring-0 dark:ring-1 dark:ring-[#33282e] dark:hover:text-white/70 dark:hover:ring-[#c8bcc2];
     }
 }
 
@@ -258,8 +257,8 @@
     & .fi-tenant-menu,
     & .fi-dropdown-panel {
         background:
-            linear-gradient(#2e3440, #3b4252),
-            linear-gradient(to right, rgb(82, 115, 125), rgb(59, 66, 82));
+            linear-gradient(#181115, #231a20),
+            linear-gradient(to right, #f44e82, #f99fc0);
         background-clip: padding-box, border-box;
         background-origin: border-box;
     }
@@ -268,7 +267,7 @@
 /* Other containers */
 .fi-tenant-menu,
 .fi-dropdown-panel {
-    @apply border border-transparent dark:bg-secondary-900;
+    @apply border border-transparent bg-white dark:bg-[#231a20];
 }
 
 .fi-tenant-menu {
@@ -280,27 +279,27 @@
    =========================== */
 
 .fi-input-wrp {
-    @apply ring-1 ring-[#d8dee9] dark:ring-white/20;
+    @apply ring-1 ring-[#ecdfe6] dark:ring-[#33282e];
 }
 
 .fi-input {
-    @apply disabled:!bg-gray-50 dark:disabled:!bg-gray-800;
+    @apply disabled:!bg-[#fdf7fa] dark:disabled:!bg-[#231a20];
 }
 
 .fi-fo-field-wrp-label span {
-    @apply text-[#4c566a];
+    @apply text-[#14171f] dark:text-white;
 }
 
 .fi-fo-field-wrp-helper-text {
-    @apply text-gray-500 dark:text-gray-300;
+    @apply text-[#4f5564] dark:text-[#c8bcc2];
 }
 
 .fi-fo-field-wrp-error-message {
-    @apply text-[#bf616a] dark:text-[#d08770];
+    @apply text-red-500 dark:text-red-400;
 }
 
 .fi-invalid {
-    @apply ring-[#bf616a] dark:ring-[#d08770];
+    @apply ring-red-500 dark:ring-red-400;
 }
 
 .fi-fo-toggle {
@@ -319,10 +318,10 @@
 
 .fi-global-search-field {
     & .fi-input-wrp {
-        @apply rounded-full bg-[#f5f8fa] dark:bg-gray-900 ring-4 ring-white dark:ring-gray-800;
+        @apply rounded-full bg-[#fdf7fa] dark:bg-[#181115] ring-4 ring-white dark:ring-[#231a20];
 
         & .fi-input-wrp-prefix {
-            @apply bg-white dark:bg-gray-800 rounded-full ps-2 mr-2;
+            @apply bg-white dark:bg-[#231a20] rounded-full ps-2 mr-2;
         }
     }
 }
@@ -352,7 +351,7 @@
    =========================== */
 
 .fi-breadcrumbs-item-label {
-    @apply text-[var(--color-polarnight-400)];
+    @apply text-[#4f5564] dark:text-[#c8bcc2];
 }
 
 /* ===========================
@@ -360,5 +359,5 @@
    =========================== */
 
 .fi-header-heading {
-    @apply text-[#434c5e] dark:text-[#e5e9f0];
+    @apply text-[#14171f] dark:text-white;
 }
