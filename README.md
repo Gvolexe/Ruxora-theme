@@ -1,6 +1,6 @@
-# Ruxora Theme
+# Gvol Theme
 
-A light and dark Paymenter panel theme using the Ruxora brand palette.
+A light and dark Pelican panel theme using the Gvol brand palette.
 
 _Originally created by [Andréia Bohner](https://github.com/andreia) as [Filament Theme](https://github.com/andreia/filament-nord-theme), under MIT License._
 

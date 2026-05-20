@@ -1,21 +1,21 @@
 <?php
 
-namespace Boy132\NordTheme;
+namespace Gvol\GvolTheme;
 
 use Filament\Contracts\Plugin;
 use Filament\Panel;
 use Filament\Support\Colors\Color;
 
-class NordThemePlugin implements Plugin
+class GvolThemePlugin implements Plugin
 {
     public function getId(): string
     {
-        return 'ruxora-theme';
+        return 'gvol-theme';
     }
 
     public function register(Panel $panel): void
     {
-        $panel->viteTheme('plugins/ruxora-theme/resources/css/theme.css');
+        $panel->viteTheme('plugins/gvol-theme/resources/css/theme.css');
 
         $panel->colors([
             'gray' => [

@@ -1,13 +1,13 @@
 # Agent Notes
 
 ## Scope
-- This repo is a Paymenter/Filament theme plugin forked from the Nord theme; the work is to replace the Nordic look with the Ruxora logo/color palette.
-- The effective theme wiring is split between `plugin.json`, `src/NordThemePlugin.php`, and `resources/css/theme.css`.
+- This repo is a Pelican/Filament theme plugin forked from the Nord theme; the work is to replace the Nordic look with the Gvol logo/color palette.
+- The effective theme wiring is split between `plugin.json`, `src/GvolThemePlugin.php`, and `resources/css/theme.css`.
 - There are no local package, Composer, build, lint, or test scripts in this repo; verify changes in the host Paymenter panel/theme build.
 
 ## Theme Wiring
-- `NordThemePlugin::register()` loads `plugins/ruxora-theme/resources/css/theme.css`; the deployed plugin directory must be exactly `ruxora-theme` on case-sensitive Linux filesystems.
-- `plugin.json` uses `id: "ruxora-theme"`; `NordThemePlugin::getId()` must return the same id or `php artisan p:plugin:install` can list the plugin but fail lookup.
+- `GvolThemePlugin::register()` loads `plugins/gvol-theme/resources/css/theme.css`; the deployed plugin directory must be exactly `gvol-theme` on case-sensitive Linux filesystems.
+- Pelican requires `plugin.json` `id` to match the plugin root folder; `GvolThemePlugin::getId()` must also return the same id or `php artisan p:plugin:install` can list the plugin but fail lookup.
 - `theme.css` imports Filament's theme CSS with `@import '../../../../vendor/filament/filament/resources/css/theme.css';`, so it expects to be compiled from inside the host panel plugin location.
 - Existing selectors are Filament utility classes (`.fi-*`) using Tailwind `@apply` and `@theme`; preserve that style unless replacing a whole pattern.
 

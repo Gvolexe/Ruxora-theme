@@ -20,16 +20,16 @@
   --color-secondary-900: rgba(var(--secondary-900), <alpha-value>);
   --color-secondary-950: rgba(var(--secondary-950), <alpha-value>);
 
-  --color-ruxora-bg-light: #ffffff;
-  --color-ruxora-bg-light-secondary: #fdf7fa;
-  --color-ruxora-border-light: #ecdfe6;
-  --color-ruxora-text-light: #14171f;
-  --color-ruxora-muted-light: #4f5564;
-  --color-ruxora-bg-dark: #181115;
-  --color-ruxora-bg-dark-secondary: #231a20;
-  --color-ruxora-border-dark: #33282e;
-  --color-ruxora-text-dark: #ffffff;
-  --color-ruxora-muted-dark: #c8bcc2;
+  --color-gvol-bg-light: #ffffff;
+  --color-gvol-bg-light-secondary: #fdf7fa;
+  --color-gvol-border-light: #ecdfe6;
+  --color-gvol-text-light: #14171f;
+  --color-gvol-muted-light: #4f5564;
+  --color-gvol-bg-dark: #181115;
+  --color-gvol-bg-dark-secondary: #231a20;
+  --color-gvol-border-dark: #33282e;
+  --color-gvol-text-dark: #ffffff;
+  --color-gvol-muted-dark: #c8bcc2;
 }
 
 /* ===========================
@@ -187,7 +187,7 @@
 
     &,
     & .fi-ta-ctn-with-header {
-        @apply dark:bg-[var(--color-ruxora-bg-dark-secondary)];
+        @apply dark:bg-[var(--color-gvol-bg-dark-secondary)];
     }
 }
 
