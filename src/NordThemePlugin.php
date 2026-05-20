@@ -10,12 +10,12 @@ class NordThemePlugin implements Plugin
 {
     public function getId(): string
     {
-        return 'nord-theme';
+        return 'ruxora-theme';
     }
 
     public function register(Panel $panel): void
     {
-        $panel->viteTheme('plugins/nord-theme/resources/css/theme.css');
+        $panel->viteTheme('plugins/ruxora-theme/resources/css/theme.css');
 
         $panel->colors([
             'gray' => [

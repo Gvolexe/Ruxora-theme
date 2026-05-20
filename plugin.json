@@ -1,11 +1,11 @@
 {
-    "id": "nord-theme",
+    "id": "ruxora-theme",
     "name": "Ruxora Theme",
     "author": "Boy132 (& andreia)",
     "version": "1.0.0",
     "description": "A light and dark Ruxora theme for Paymenter.",
     "category": "theme",
-    "url": "https://github.com/pelican-dev/plugins/tree/main/nord-theme",
+    "url": null,
     "update_url": null,
     "namespace": "Boy132\\NordTheme",
     "class": "NordThemePlugin",
